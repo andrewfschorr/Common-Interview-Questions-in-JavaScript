@@ -11,5 +11,8 @@
   },
   "scripts": {
     "test": "jest"
-  }
+  },
+  "jest": {
+    "testMatch": ["**/ch**/*.js?(x)"]
+   }
 }

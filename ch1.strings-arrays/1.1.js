@@ -22,7 +22,6 @@ function stringHasUniqueCharactersConstanSpace(s) {
     return true;
 }
 
-
 const sUnique = 'abcdefghijklmnopqrstuv';
 const sNotUnique = 'abcdefgjihajlm';
 
