@@ -1,4 +1,8 @@
-function stringHasUniqueCharacters(s) {
+/*
+ * Time: N
+ * Space: N
+ */
+export function stringHasUniqueCharacters(s) {
     const letterMap = {};
     for (let i = 0; i < s.length; i++) {
         if (letterMap[s[i]] === undefined) {
@@ -11,9 +15,10 @@ function stringHasUniqueCharacters(s) {
 }
 
 /*
- * This is constant space... but N^2
+ * Time: N^2
+ * Space: 1
  */
-function stringHasUniqueCharactersConstanSpace(s) {
+export function stringHasUniqueCharactersConstantSpace(s) {
     for (let i = 0; i < s.length - 1; i++) {
         for (let j = i + 1; j < s.length; j++) {
             if (s[i] === s[j]) return false;
@@ -22,21 +27,16 @@ function stringHasUniqueCharactersConstanSpace(s) {
     return true;
 }
 
-const sUnique = 'abcdefghijklmnopqrstuv';
-const sNotUnique = 'abcdefgjihajlm';
-
-test(`${sUnique} to return true`, () => {
-    expect(stringHasUniqueCharacters(sUnique)).toBe(true);
-});
-
-test(`${sNotUnique} to return false`, () => {
-    expect(stringHasUniqueCharacters(sNotUnique)).toBe(false);
-});
-
-test(`${sUnique} to return true`, () => {
-    expect(stringHasUniqueCharactersConstanSpace(sUnique)).toBe(true);
-});
-
-test(`${sNotUnique} to return false`, () => {
-    expect(stringHasUniqueCharactersConstanSpace(sNotUnique)).toBe(false);
-});
+/*
+ * Time: N lg N
+ * Space: 1
+ */
+export function stringHasUniqueCharactersSort(s) {
+    s = s.split('').sort().join('');
+    for (let i = 0; i < s.length; i++) {
+        if (s[i- 1] && s[i] === s[i-1]) {
+            return false;
+        }
+    }
+    return true;
+}
