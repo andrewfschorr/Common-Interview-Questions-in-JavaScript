@@ -3,7 +3,7 @@
  * Space: N
  * This is dumb, but the given string gives you a buffer 🤔, whats the point in that?
  */
-export function urlIfy(url, len) {
+function urlIfy(url, len) {
     if (!url || url.length === 0) return url;
     url = url.split('');
     let spaces = 0;
@@ -30,7 +30,7 @@ export function urlIfy(url, len) {
  * This one is much smarter about it, it can take strings like `hello   good    world`;
  * But it uses extra space :/
  */
-export function urlIfySmart(url) {
+function urlIfySmart(url) {
     if (!url || url.length === 0) return url;
     url = url.split('');
     const newUrl = [];
@@ -51,4 +51,9 @@ export function urlIfySmart(url) {
         newUrl.pop();
     }
     return newUrl.join('');
+}
+
+module.exports = {
+    urlIfy,
+    urlIfySmart
 }

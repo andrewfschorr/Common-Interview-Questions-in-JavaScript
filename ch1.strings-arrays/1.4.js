@@ -3,7 +3,7 @@
  * Time: N
  * Space: N
  */
-export default function isPalindromePermutations(s) {
+function isPalindromePermutations(s) {
     const letterMap = {};
     for (let i = 0; i < s.length; i++) {
         if (letterMap[s[i]] === undefined) {
@@ -14,3 +14,5 @@ export default function isPalindromePermutations(s) {
     }
     return Object.keys(letterMap).length <= 1;
 }
+
+module.exports = isPalindromePermutations;

@@ -1,4 +1,4 @@
-import * as funcs from './1.1';
+const funcs = require('./1.1');
 
 const testCases = {
     'abcdefghijklmno': true,

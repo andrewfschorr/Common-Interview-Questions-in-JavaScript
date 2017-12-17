@@ -7,8 +7,6 @@
   "author": "Andrew F Schorr",
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "^6.0.15",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.0.15",
     "jest": "^21.2.1"
   },
   "scripts": {

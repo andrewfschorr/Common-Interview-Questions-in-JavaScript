@@ -2,7 +2,7 @@
  * Time: 2(N lg N) => N lg N
  * Space: N
  */
-export function isPermutationSort(a, b) {
+function isPermutationSort(a, b) {
     return a.split('').sort().join('') === b.split('').sort().join('');
 }
 
@@ -10,7 +10,7 @@ export function isPermutationSort(a, b) {
  * Time: N
  * Space: N
  */
-export function isPermutationCharCount(a, b) {
+function isPermutationCharCount(a, b) {
     const countMap = {}
     for (let i = 0; i < a.length; i++) {
         if (countMap[a[i]] === undefined) {
@@ -29,4 +29,9 @@ export function isPermutationCharCount(a, b) {
         }
     }
     return Object.keys(countMap).length === 0;
+}
+
+module.exports = {
+    isPermutationSort,
+    isPermutationCharCount,
 }

@@ -1,4 +1,4 @@
-import isPalindrome from './1.4';
+const isPalindrome = require('./1.4');
 
 const testCasts = {
     'aabaa': true,

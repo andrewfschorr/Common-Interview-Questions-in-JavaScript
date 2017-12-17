@@ -1,4 +1,4 @@
-import * as funcs from './1.3';
+const funcs = require('./1.3');
 
 test(`undefined to return undefined`, () => {
     expect(funcs.urlIfySmart(undefined)).toBe(undefined);

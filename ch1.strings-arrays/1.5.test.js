@@ -1,4 +1,18 @@
-import * as funcs from './1.5';
+const funcs = require('./1.5');
+
+const testCasesSimple = [
+    ['pale', 'pale', true],
+    ['pales', 'pale', true],
+    ['pale', 'bale', true],
+    ['pale', 'bae', false],
+];
+
+testCasesSimple.forEach((testCase) => {
+    const result = testCase[2];
+    test(`${testCase[0]} and ${testCase[1]} to be ${result}`, () => {
+        expect(funcs.oneEditAway(testCase[0], testCase[1])).toBe(result);
+    });
+});
 
 const testCases = [
     ['saturday', 'sunday', 3],

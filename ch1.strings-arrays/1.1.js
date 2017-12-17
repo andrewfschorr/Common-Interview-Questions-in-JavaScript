@@ -2,7 +2,7 @@
  * Time: N
  * Space: N
  */
-export function stringHasUniqueCharacters(s) {
+function stringHasUniqueCharacters(s) {
     const letterMap = {};
     for (let i = 0; i < s.length; i++) {
         if (letterMap[s[i]] === undefined) {
@@ -18,7 +18,7 @@ export function stringHasUniqueCharacters(s) {
  * Time: N^2
  * Space: 1
  */
-export function stringHasUniqueCharactersConstantSpace(s) {
+function stringHasUniqueCharactersConstantSpace(s) {
     for (let i = 0; i < s.length - 1; i++) {
         for (let j = i + 1; j < s.length; j++) {
             if (s[i] === s[j]) return false;
@@ -31,7 +31,7 @@ export function stringHasUniqueCharactersConstantSpace(s) {
  * Time: N lg N
  * Space: 1
  */
-export function stringHasUniqueCharactersSort(s) {
+function stringHasUniqueCharactersSort(s) {
     s = s.split('').sort().join('');
     for (let i = 0; i < s.length; i++) {
         if (s[i- 1] && s[i] === s[i-1]) {
@@ -39,4 +39,10 @@ export function stringHasUniqueCharactersSort(s) {
         }
     }
     return true;
+}
+
+module.exports = {
+    stringHasUniqueCharacters,
+    stringHasUniqueCharactersConstantSpace,
+    stringHasUniqueCharactersSort,
 }

@@ -1,4 +1,4 @@
-import * as funcs from './1.2';
+const funcs = require('./1.2');
 
 const trueTestCasts = [
     ['abcdefghi', 'ihgfedcba'],
