@@ -4,6 +4,7 @@
 
 #### Now in JavaScript ✨
 
+### Cracking the Coding Interview
 1. Arrays and Strings
     - [1.1 Unique character string](ch1.strings-arrays/1.1.js)
     - [1.2 Check permutation](ch1.strings-arrays/1.2.js)
@@ -15,8 +16,10 @@
     - [1.8 Zero matrix](ch1.strings-arrays/1.8.js)
     - [1.9 String rotation](ch1.strings-arrays/1.9.js)
 1. Linked Lists
-    - [2.1 Remove dups](ch2.linked-lists/2.1.js)
 
+### InterviewCake
+    - Balanced binary search tree
+    - Binary Search Tree Checker
 
 `npm test` to run all the tests, and `jest --watchAll` to all of the things.
 
